@@ -1,0 +1,19 @@
+<!-- Add <track> elements to a video for subtitles and captions. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Accessible Video</title>
+</head>
+
+<body>
+    <h1>Tutorial with Captions</h1>
+    <video width="320" height="240" controls>
+        <source src="forrest_gump.mp4" type="video/mp4">
+        <source src="forrest_gump.ogg" type="video/ogg">
+        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+    </video>
+</body>
+
+</html>
