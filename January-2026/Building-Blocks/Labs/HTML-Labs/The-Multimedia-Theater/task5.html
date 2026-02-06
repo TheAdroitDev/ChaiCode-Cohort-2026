@@ -1,0 +1,25 @@
+<!-- Create a canvas element with width and height attributes for dynamic drawing. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <h1>Drawing Canvas</h1>
+
+    <canvas width="auto" height="auto" id="myCanvas">
+        Your browser does not support the canvas tag.
+    </canvas>
+
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 80, 80);
+    </script>
+</body>
+
+</html>
