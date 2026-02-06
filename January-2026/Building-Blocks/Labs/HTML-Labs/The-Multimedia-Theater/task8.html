@@ -1,0 +1,46 @@
+<!-- Create a comprehensive multimedia page with: (1) Video with captions, (2) Audio player, (3) Embedded iframe, (4) SVG graphic, (5) Canvas element. Show multimedia mastery! -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChaiCode Multimedia</title>
+</head>
+
+<body>
+    <h1>ChaiCode Media Center</h1>
+
+    <video width="auto" height="auto" poster="thumbnail.png" controls>
+        <source src="https://www.youtube.com/watch?v=LWMk9yFAE5M" type=".mp4">
+        <source src="https://www.youtube.com/watch?v=LWMk9yFAE5M" type=".mp3">
+        <track label="English" kind="subtitles" srclang="en" src="/shared-assets/misc/sintel-en.vtt" default />
+    </video>
+
+    <audio controls>
+        <source src="/audio.com" type=".mp3">
+        <source src="/audio.com" type=".mp3">
+    </audio>
+
+
+    <iframe width="auto" src="https://www.youtube.com/embed/LWMk9yFAE5M?si=ZoxOLXUXEFppyacl"
+        title="YouTube video player" frameborder="0"></iframe>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        <svg width="400" height="120">
+            <rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" />
+        </svg>
+    </svg>
+
+    <canvas width="auto" height="auto" id="myCanvas">
+        Your browser does not support the canvas tag.
+    </canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 80, 80);
+    </script>
+</body>
+
+</html>
