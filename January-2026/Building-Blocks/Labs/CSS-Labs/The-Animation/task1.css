@@ -1,0 +1,4 @@
+/* Set .fade to transition: opacity 0.3s. */
+.fade{
+  transition: opacity 0.3s;
+}
