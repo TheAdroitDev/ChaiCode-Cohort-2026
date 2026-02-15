@@ -1,0 +1,6 @@
+/* Set .multi to transition: all 0.3s ease. */
+
+/* Write your CSS here */
+.multi{
+  transition: all 0.3s ease;
+}
