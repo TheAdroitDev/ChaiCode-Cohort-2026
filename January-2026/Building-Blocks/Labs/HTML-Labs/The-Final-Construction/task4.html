@@ -1,0 +1,72 @@
+<!-- Create a complete product page with: product images, specification table, feature lists, video demo, and order form. Demonstrate comprehensive HTML knowledge.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Page</title>
+</head>
+
+<body>
+    <h1>ChaiCode Premium Course</h1>
+    <!-- Build product page -->
+    <section>
+        <h2>Product Images</h2>
+        <figure src="product-image1.jpg" alt="ChaiCode Course Image 1" width="300"> </figure>
+        <img src="product-image2.jpg" alt="ChaiCode Course Image 2" width="300">
+    </section>
+    <section>
+        <h2>Specifications</h2>
+        <table border="1">
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td>12 weeks</td>
+            </tr>
+            <tr>
+                <td>Level</td>
+                <td>Beginner to Advanced</td>
+            </tr>
+            <tr>
+                <td>Format</td>
+                <td>Online</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Key Features</h2>
+        <ul>
+            <li>Comprehensive Curriculum</li>
+            <li>Hands-on Projects</li>
+            <li>Expert Instructors</li>
+            <li>Community Support</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Video Demo</h2>
+        <video width="320" height="240" controls>
+            <source src="demo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <section>
+        <h2>Order Form</h2>
+        <form action="/submit-order" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+
+</body>
+
+</html>
