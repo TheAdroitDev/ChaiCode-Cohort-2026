@@ -1,0 +1,5 @@
+/* Set .scale to transform: scale(1.5). */
+
+.scale{
+    transform: scale(1.5);
+}
