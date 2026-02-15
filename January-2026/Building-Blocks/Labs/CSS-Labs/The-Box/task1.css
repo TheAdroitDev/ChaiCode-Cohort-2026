@@ -1,0 +1,9 @@
+/* Give the .box element 20px of padding on all sides. */
+
+.box {
+  background-color: lightcoral;
+  width: 200px;
+  padding: 20px;
+}
+
+/* Add padding below */
