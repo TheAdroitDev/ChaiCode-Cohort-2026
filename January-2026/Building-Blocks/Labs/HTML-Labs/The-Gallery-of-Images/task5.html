@@ -1,0 +1,21 @@
+<!-- Create a responsive image using the <picture> element with multiple <source> tags for different screen sizes, and a fallback <img> tag. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Images</title>
+</head>
+
+<body>
+    <h1>Adaptive Gallery</h1>
+    <!-- Create a picture element with sources -->
+    <picture>
+        <source media="(min-width: 650px)" srcset="Large-Size-Image">
+        <source media="(min-width: 450px)" srcset="Medium-Size-Image">
+        </source>
+        <img src="https://vastu-mentor.vercel.app/assets/images/logo.png">
+    </picture>
+</body>
+
+</html>
