@@ -1,0 +1,111 @@
+<!-- Create a complete, professional form for ChaiCode course registration that includes: (1) Multiple input types, (2) Required fields with validation, (3) Radio buttons and checkboxes, (4) Select dropdown, (5) Textarea, (6) Fieldsets with legends, (7) File upload, (8) Datalist, (9) Action and method. Make it comprehensive!
+
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChaiCode Registration</title>
+</head>
+
+<body>
+    <h1>ChaiCode Course Registration</h1>
+    <!-- Create a comprehensive registration form -->
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>User Credentials:</legend>
+            <br>
+            <label>
+                <input title="Name must be between 0 and 13" pattern="[A-Za-z ]" maxlength="13" required name="username"
+                    placeholder="Enter Your Name" type="text">
+            </label>
+
+            <br><br>
+            <hr>
+            <br>
+
+            <label>
+                <input title="Email is required" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+                    maxlength="13" required name="email" placeholder="Enter Your Email" type="email">
+            </label>
+
+            <br><br>
+            <hr>
+            <br>
+
+            <label>
+                <input title="Please enter a valid phone number" pattern="^\d{10}$" min="0" max="10" required
+                    name="number" placeholder="Number" type="number">
+            </label>
+            <br>
+            <br>
+            <fieldset>
+                <legend>More Info</legend>
+                <br><br>
+                <hr>
+                <br>
+
+                <label for="male">Male</label>
+                <input name="male" id="male" type="radio">
+                <label for="female">Female</label>
+                <input name="male" id="female" type="radio">
+
+                <br><br>
+                <hr>
+                <br>
+
+                <label for="newsletter">Subscribe to our Newsletter</label>
+                <input name="newsletter" id="newsletter" type="checkbox">
+
+                <br><br>
+                <hr>
+                <br>
+
+                <label for="important-emails">Only Important Emails</label>
+                <input name="important-emails" id="important-emails" type="checkbox">
+
+                <br><br>
+                <hr>
+                <br>
+
+                <label for="country">Select Country</label>
+                <select name="country" id="country">
+                    <option value="Westalis">Westalis</option>
+                    <option value="Ostania">Ostania</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <hr>
+            <br>
+            <fieldset>
+                <legend>Ending</legend>
+
+                <label for="Expectations">
+                    <textarea required cols="23" rows="4" name="thoughts" placeholder="What are your Expectations"
+                        id="expectations"></textarea>
+                </label>
+
+                <br><br>
+                <hr>
+                <br>
+
+                <label for="fileT">Can choose Multiple file, only PDF</label>
+                <input required accept=".pdf" multiple type="file" name="file" id="fileT">
+
+                <br><br>
+                <hr>
+                <br>
+
+                <input placeholder="Search" type="text" list="CodeGO005">
+                <datalist id="CodeGO005">
+                    <option value="Hitesh Choudhary">Hitesh Choudhary</option>
+                    <option value="Piyush Garg">Piyush Garg</option>
+                </datalist>
+
+            </fieldset>
+    </form>
+</body>
+
+</html>
