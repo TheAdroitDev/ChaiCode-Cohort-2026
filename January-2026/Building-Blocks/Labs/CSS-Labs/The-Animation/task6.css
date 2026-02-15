@@ -1,0 +1,12 @@
+/* Set .origin to transform-origin: top left.
+
+ */
+ /* Write your CSS here */
+
+
+
+
+.origin{
+   transform: rotate(45deg);
+  transform-origin: 20% 40%;
+}
