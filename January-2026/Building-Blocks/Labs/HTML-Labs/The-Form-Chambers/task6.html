@@ -1,0 +1,27 @@
+<!-- Create a form using validation attributes: pattern for regex validation, min/max for numbers, and maxlength for text length limits. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <h1>Account Setup</h1>
+  <!-- Create a form with validation attributes -->
+  <form action="#">
+    <label>
+      <input title="Too Short" maxlength="13" pattern="[A-Za-z ]" name="Name" required placeholder="name" type="text">
+    </label>
+    <label>
+      <input required min="18" max="100" pattern="" placeholder="age" type="number"
+        title="Age must be between 18 and 100">
+    </label>
+    <label>
+      <input name="website" required placeholder="https://example.com" type="url">
+    </label>
+  </form>
+</body>
+
+</html>
