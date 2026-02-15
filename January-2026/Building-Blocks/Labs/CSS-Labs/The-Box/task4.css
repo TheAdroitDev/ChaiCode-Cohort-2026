@@ -1,0 +1,12 @@
+/* Set box-sizing to border-box on the .box element.
+
+ */
+
+ .box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid blue;
+  box-sizing: border-box;
+}
+
+/* Add box-sizing below */
