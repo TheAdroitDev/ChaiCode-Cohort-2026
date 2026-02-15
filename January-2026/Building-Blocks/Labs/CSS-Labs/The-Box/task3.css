@@ -1,0 +1,8 @@
+/* Add a 2px solid red border to the .box element */
+.box {
+  padding: 15px;
+  background-color: lightyellow;
+  border: 2px solid red;
+}
+
+/* Add border below */
