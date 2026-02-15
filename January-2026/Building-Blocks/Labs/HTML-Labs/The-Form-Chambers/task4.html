@@ -1,0 +1,41 @@
+<!-- Create a form with radio buttons (single choice), checkboxes (multiple choices), and a select dropdown. Show different ways to let users choose options. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Selection</title>
+</head>
+
+<body>
+    <h1>ChaiCode Course Selection</h1>
+    <!-- Create a form with radio, checkbox, and select -->
+    <form action="#">
+        <label for="webdev">webdev</label>
+        <input name="webdev" id="webdev" type="radio">
+
+        <label for="systemdesign">systemdesign</label>
+        <input name="webdev" id="systemdesign" type="radio">
+
+        <br><br>
+        <hr>
+
+        <label for="dsawithjs">dsawithjs</label>
+        <input type="checkbox" name="dsawithjs" id="dsawithjs">
+
+        <label for="docker">docker</label>
+        <input type="checkbox" name="docker" id="dsawithjs">
+
+        <br><br>
+        <hr>
+
+        <label for="cars">Choose a course:</label>
+        <select id="cars" name="cars">
+            <option value="webdev">webdev</option>
+            <option value="dsawithjs">dsawithjs</option>
+            <option value="systemdesign">systemdesign</option>
+        </select>
+    </form>
+</body>
+
+</html>
