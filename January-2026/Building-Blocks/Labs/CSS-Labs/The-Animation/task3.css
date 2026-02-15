@@ -1,0 +1,5 @@
+/* Set .rotate to transform: rotate(45deg). */
+
+.rotate{
+    transform: rotate(45deg);
+}
