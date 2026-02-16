@@ -1,0 +1,6 @@
+/* Set .hidden to display none. */
+
+/* Create .hidden */
+.hidden {
+    display: none;
+}
