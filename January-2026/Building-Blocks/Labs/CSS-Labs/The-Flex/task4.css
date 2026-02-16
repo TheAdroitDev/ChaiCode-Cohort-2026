@@ -1,0 +1,6 @@
+/* Set .align-center to align-items center. */
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
