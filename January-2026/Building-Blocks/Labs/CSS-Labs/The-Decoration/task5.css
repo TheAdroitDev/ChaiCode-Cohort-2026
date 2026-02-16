@@ -1,0 +1,6 @@
+/* Set .gradient to a linear gradient. */
+
+/* Write your CSS here */
+.gradient{
+   background: linear-gradient(to top, red, yellow);
+}
