@@ -1,0 +1,5 @@
+/* Set .bold-text to font-weight 700. */
+/* Create .bold-text class */
+.bold-text{
+  font-weight: 700
+}
