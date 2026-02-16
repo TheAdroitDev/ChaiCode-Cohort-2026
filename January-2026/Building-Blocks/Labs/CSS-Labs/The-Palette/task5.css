@@ -1,0 +1,7 @@
+/* Style h1, h2, and p elements with the same color. Use a comma-separated selector list to set all three to color: #2c3e50. */
+
+/* Style h1, h2, and p with the same color */
+
+h1, h2, p {
+  color:#2c3e50 ;
+}
