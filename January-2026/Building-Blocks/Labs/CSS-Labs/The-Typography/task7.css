@@ -1,0 +1,6 @@
+/* Set .spaced to letter-spacing 2px. */
+
+/* Create .spaced class */
+.spaced{
+  letter-spacing: 2px;
+  }
