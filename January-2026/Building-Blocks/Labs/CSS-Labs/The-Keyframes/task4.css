@@ -1,0 +1,7 @@
+/* Set .alternate to animation-direction alternate. */
+
+/* Write your CSS here */
+
+.alternate{
+  animation: alternate;
+}
