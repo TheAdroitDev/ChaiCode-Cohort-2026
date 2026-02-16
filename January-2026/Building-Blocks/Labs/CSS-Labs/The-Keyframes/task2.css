@@ -1,0 +1,5 @@
+/* Set .slow to animation-duration 3s. */
+
+.slow{
+    animation-duration: 3s;
+}
