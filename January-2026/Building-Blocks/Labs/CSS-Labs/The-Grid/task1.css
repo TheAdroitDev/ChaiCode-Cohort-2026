@@ -1,0 +1,6 @@
+/* Set .grid to display grid. */
+
+/* Write your CSS here */
+.grid{
+  display: grid;
+}
