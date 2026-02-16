@@ -1,0 +1,8 @@
+/* Set .block-element to display block.
+
+ */
+
+/* Create .block-element */
+.block-element{
+  display: block;
+}
