@@ -1,0 +1,5 @@
+/* Set .fill to animation-fill-mode forwards. */
+
+.fill{
+    animation-fill-mode: forwards;
+}
