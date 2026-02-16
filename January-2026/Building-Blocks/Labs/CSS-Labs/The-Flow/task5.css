@@ -1,0 +1,7 @@
+/* Set .relative to position relative and top 10px. */
+
+/* Create .relative */
+.relative{
+  position: relative;
+  top: 10px;
+}
