@@ -1,0 +1,6 @@
+/* Set .bg-cover to background-size cover. */
+
+/* Write your CSS here */
+.bg-cover{
+  background-size: cover;
+}
