@@ -1,0 +1,9 @@
+/* Set .grid to gap 20px.
+
+ */
+ /* Write your CSS here */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
