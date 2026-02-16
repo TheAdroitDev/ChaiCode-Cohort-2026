@@ -1,0 +1,5 @@
+/* Set .delayed to animation-delay 1s. */
+
+.delayed {
+  animation-delay: 1s;
+}
