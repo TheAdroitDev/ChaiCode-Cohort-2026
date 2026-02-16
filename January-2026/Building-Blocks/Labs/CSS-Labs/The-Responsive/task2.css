@@ -1,0 +1,9 @@
+/* Create a @media query with min-width: 768px (for desktop/tablet screens). Inside this media query, create a .mobile-first selector with font-size: 18px. This mobile-first approach means you style for mobile first, then add larger styles for bigger screens. */
+
+/* Write your CSS here */
+
+@media (min-width: 768px){
+  .mobile-first{
+    font-size: 18px;
+  }
+}
