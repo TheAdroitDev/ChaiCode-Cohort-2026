@@ -1,0 +1,8 @@
+/* Set .bg to background-image with a gradient.
+
+ */
+
+ /* Write your CSS here */
+.bg{
+  background-image: url(https://images.pexels.com/photos/18681382/pexels-photo-18681382.jpeg);
+}
