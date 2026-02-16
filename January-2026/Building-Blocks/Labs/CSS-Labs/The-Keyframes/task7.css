@@ -1,0 +1,20 @@
+/* Create a @keyframes animation named 'slideIn' that slides an element from -100px left (translateX(-100px)) with opacity 0, to its normal position with opacity 1. Then apply this animation to the .complex selector with a 1s duration and ease-out timing. */
+
+
+
+/* Write your CSS here */
+@keyframes slideIn{
+  from{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.complex{
+  animation: slideIn 1s ease-in-out;
+}
