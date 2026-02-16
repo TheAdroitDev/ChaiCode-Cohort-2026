@@ -1,0 +1,8 @@
+/* Create a .container selector with max-width: 1200px and margin: 0 auto. This creates a centered container that doesn't exceed 1200px width on large screens.
+
+ */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
