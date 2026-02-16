@@ -1,0 +1,8 @@
+
+/* Set .centered to justify-content center.
+
+ */
+.centered {
+  display: flex;
+  justify-content: center;
+}
