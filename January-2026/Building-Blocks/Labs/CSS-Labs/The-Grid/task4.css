@@ -1,0 +1,10 @@
+/* Set .grid to grid-template-rows: 100px 100px.
+
+ */
+
+ /* Write your CSS here */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+}
