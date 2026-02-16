@@ -1,0 +1,7 @@
+/* Use the body selector to set the text color to red. Type your CSS in the editor and see the preview update in real-time.
+
+ */
+ /* Write your CSS here */
+body{
+  color: red;
+}
