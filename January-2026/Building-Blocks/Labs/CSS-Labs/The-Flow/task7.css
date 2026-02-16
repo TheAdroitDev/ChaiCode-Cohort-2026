@@ -1,0 +1,5 @@
+/* Set .front to z-index 10. */
+/* Create .front */
+.front{
+  z-index: 10;
+}
