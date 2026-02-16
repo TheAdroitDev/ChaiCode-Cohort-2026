@@ -1,0 +1,9 @@
+/* Set .span-2 to grid-column: span 2.
+
+ */
+
+ /* Write your CSS here */
+.span-2{
+  display: grid;
+  grid-column:  2;
+}
