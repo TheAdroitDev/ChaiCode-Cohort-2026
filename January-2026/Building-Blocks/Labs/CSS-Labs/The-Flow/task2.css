@@ -1,0 +1,8 @@
+/* Set .inline-element to display inline.
+
+*/
+
+/* Create .inline-element */
+.inline-element{
+  display: inline;
+}
