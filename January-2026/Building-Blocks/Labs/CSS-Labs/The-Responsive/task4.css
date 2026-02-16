@@ -1,0 +1,13 @@
+/* Create a responsive grid layout. First, create .grid with display: grid and grid-template-columns: 1fr (1 column for mobile). Then create a @media query with min-width: 768px, and inside it set .grid to have grid-template-columns: repeat(3, 1fr) (3 equal columns for desktop).
+
+ */
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
