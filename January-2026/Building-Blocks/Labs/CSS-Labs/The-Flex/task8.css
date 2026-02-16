@@ -1,0 +1,9 @@
+/* Set .center-both to justify-content center and align-items center.
+
+ */
+
+ .center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
