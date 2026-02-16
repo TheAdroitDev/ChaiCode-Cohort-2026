@@ -1,0 +1,7 @@
+/* Create a .fluid selector with font-size: clamp(16px, 4vw, 24px). The clamp() function sets a minimum (16px), preferred (4vw viewport-based), and maximum (24px) font size, making typography scale smoothly between screen sizes.
+
+ */
+
+.fluid{
+    font-size: clamp(16px,4vw,24px);
+}
