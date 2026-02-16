@@ -1,0 +1,13 @@
+/* Create a class selector called .highlight and give it a color of orange and font-weight of bold.
+
+ */
+
+body {
+    color: #333;
+}
+
+/* Create .highlight class below */
+.highlight {
+    color: orange;
+    font-weight: bold;
+}
