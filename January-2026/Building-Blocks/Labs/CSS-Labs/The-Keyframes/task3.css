@@ -1,0 +1,6 @@
+/* Set .infinite to animation-iteration-count infinite. */
+
+/* Write your CSS here */
+.infinite{
+  animation: infinite;
+}
