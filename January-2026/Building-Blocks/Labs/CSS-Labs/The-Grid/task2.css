@@ -1,0 +1,8 @@
+/* Set .grid to grid-template-columns: 1fr 1fr 1fr. */
+
+
+/* Write your CSS here */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
