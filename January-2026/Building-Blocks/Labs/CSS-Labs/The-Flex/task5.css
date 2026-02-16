@@ -1,0 +1,6 @@
+/* Set .wrap to flex-wrap wrap. */
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
