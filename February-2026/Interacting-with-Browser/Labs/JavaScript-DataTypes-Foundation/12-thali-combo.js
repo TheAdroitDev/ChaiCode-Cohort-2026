@@ -95,9 +95,29 @@ export function getThaliStats(thalis) {
   };
 }
 export function searchThaliMenu(thalis, query) {
-  // Your code here
+  if (!Array.isArray(thalis) || typeof query !== "string") return [];
+
+  const q = query.toLowerCase();
+
+  return thalis.filter(t =>
+    t.name.toLowerCase().includes(q) ||
+    t.items.some(item => item.toLowerCase().includes(q))
+  );
 }
 
 export function generateThaliReceipt(customerName, thalis) {
-  // Your code here
+  if (typeof customerName !== "string" ||!Array.isArray(thalis) ||thalis.length === 0) return "";
+
+  const lineItems = thalis.map(t => `- ${t.name} x Rs.${t.price}`).join("\n");
+
+  const total = thalis.reduce((sum, t) => sum + t.price, 0);
+  const count = thalis.length;
+
+  return `THALI RECEIPT
+---
+Customer: ${customerName.toUpperCase()}
+${lineItems}
+---
+Total: Rs.${total}
+Items: ${count}`;
 }
