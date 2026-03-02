@@ -91,3 +91,17 @@ console.log(detachedBow());
 // However, we can still access this in closure function becuase it inherits the value even after the completion of the function
 // This is the behaviour of `this`. In other words it's just a pointer
 // + `this` is determines by in which enviornment we are talking about
+
+
+const myFunctionOne = function(){
+    console.log(this);
+}
+
+const myFunctionTwo = () => {
+    console.log(this);
+}
+
+myFunctionOne()
+myFunctionTwo()
+
+// last but not the least - this depends on where we are running it(enviornment)
