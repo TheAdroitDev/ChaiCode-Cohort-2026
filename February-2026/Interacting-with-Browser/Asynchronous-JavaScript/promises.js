@@ -37,3 +37,4 @@ const promise3  = new Promise((res,rej)=>{
     res("Promise resolved after 2 seconds")
   },2000)
 })
+
