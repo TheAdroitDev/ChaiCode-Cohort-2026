@@ -51,7 +51,7 @@ catalogEntry.description = "Ancient Crowns"
 catalogEntry.location = "Hall-Mark-A"
 console.log(catalogEntry);
 
-
+// Object.preventExtensions(catalogEntry);   Only prevents adding new properties; allows modifying and deleting existing ones. 
 
 const secureArtificats = { name: "Ruby Pendant" };
 
