@@ -1369,3 +1369,18 @@ class MyPromise {
 
 
 
+function fn() {}
+const sample = new fn()
+console.log(sample.__proto__)
+console.log(sample.prototype)
+
+function fn(){
+    
+}
+
+console.log(fn.prototype)
+
+let num1 = 2
+let num2 = 3
+
+console.log(num2 / num1) // -1
