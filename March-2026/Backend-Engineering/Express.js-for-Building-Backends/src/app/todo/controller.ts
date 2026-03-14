@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
-import { todoValidationSchema, type Todo } from "../models/todo.schema.js";
+import { todoValidationSchema, type Todo } from "../../models/todo.schema.js";
+
 
 
 class TodoController {
