@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const todo = {
+            id: 1,
+            content: "My todo"
+        }
+
+        localStorage.setItem("todo", JSON.stringify(todo))
+
+        const anime = {
+            name: "Spy x Family",
+            main: "Loid Forger",
+            seasons: "3",
+
+            otherCharacters: {
+                mother: "Yor Forger",
+                loidFriend: "Franky Franklin",
+                wiseBoss: "Handler"
+            },
+
+            villain: function () {
+                name: "Donavan Desmond"
+            }
+        }
+
+        const serialized = JSON.stringify(anime)
+        console.log("Serialized:", serialized);
+
+
+        // const deserialized = JSON.parse(serialized)
+        // console.log("Deserialized:",deserialized);
+
+        // console.log(deserialized.seasons)
+
+        // const anotherAnime = {...anime}
+        // console.log(anotherAnime);
+        // console.log(anotherAnime.villain);
+
+        const obj = { name: "Loid Forger", age: undefined };
+
+        console.log(JSON.stringify(obj));
+        // {"name":"Loid Forger"}
+
+
+        import { BSON, ObjectId } from 'bson';
+
+        const data = { _id: new ObjectId(), name: "Yor", age: 27 }
+
+        // serialization
+
+        const bytes = BSON.serialize(data);
+        // Output: <Buffer 2e 00 00 00 07 5f 69 64 00 64 ca 53 01 9d 14 77 b6 a1 a2 89 e4 02 6e 61 6d 65 00 05 00 00 00 4a 6f 68 6e 00 10 61 67 65 00 1e 00 00 00 00>
+
+        // deserialization
+
+        const doc = BSON.deserialize(bytes);
+        // Output: {
+        //  _id: new ObjectId("64ca53019d1477b6a1a289e4"),
+        //  name: 'Yor',
+        //  age: 27
+        // }
+
+    </script>
+</body>
+
+</html>
