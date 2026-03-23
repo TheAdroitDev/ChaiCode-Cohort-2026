@@ -1,0 +1,27 @@
+{
+  "name": "chai-forge",
+  "version": "1.0.0",
+  "description": "A lightweight utility-first CSS engine using JavaScript",
+  "keywords": [
+    "css",
+    "utility-first",
+    "tailwind",
+    "javascript",
+    "styling"
+  ],
+  "homepage": "https://github.com/TheAdroitDev/Chai-Tailwind",
+  "bugs": {
+    "url": "https://github.com/TheAdroitDev/Chai-Tailwind/issues"
+  },
+  "author": "Shivam Verma <theadroitdev> (https://theadroitdev.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheAdroitDev/Chai-Tailwind.git"
+  },
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "main": "src/index.js"
+}
