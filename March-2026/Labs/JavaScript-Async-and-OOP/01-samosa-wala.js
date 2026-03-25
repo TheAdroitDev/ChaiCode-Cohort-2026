@@ -75,7 +75,11 @@
  */
 export function createSamosaCart(ownerName, location) {
   // Your code here
-
+  /*  this.sales = [
+  { item: "samosa", quantity: 3, total: 45 },
+  { item: "jalebi", quantity: 2, total: 40 }
+]
+   */
   return {
     owner: ownerName,
     location,
@@ -89,12 +93,35 @@ export function createSamosaCart(ownerName, location) {
       this.sales.push({ item: itemName, quantity, total })
 
       return total;
+    },
+
+    getDailySales() {
+      if (this.sales.length === 0) return 0
+      return this.sales.reduce((acc, sale) => acc + sale.total, 0);
+    },
+
+    getPopularItem() {
+      if (this.sales.length === 0) return null
+      let itemCounts = 0
+      let maxItem = 0
+      let maxQuantity = 0
+      return this.sales.reduce((current, sum, i) => {
+
+      }, 0)
+    },
+
+    moveTo(newLocation) {
+      // ${this.owner} ka cart ab ${newLocation} pe hai!
+      this.location = newLocation
+
+      return `${this.owner} ka cart ab ${newLocation} pe hai!`
     }
   }
 }
 
 export function demonstrateThisLoss(cart) {
   // Your code here
+
 }
 
 export function fixWithBind(cart) {
