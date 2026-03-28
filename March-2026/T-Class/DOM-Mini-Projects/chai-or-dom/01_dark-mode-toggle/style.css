@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+    color:#222;
+    transition:0.3s;
+}
+
+.container{
+    text-align:center;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    background:#222;
+    color:white;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.dark{
+    background: #121212;
+    color: white;
+}
+
+.dark button{
+    background: white;
+    color: black;
+}
