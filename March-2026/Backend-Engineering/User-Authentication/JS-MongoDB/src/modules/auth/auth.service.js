@@ -131,6 +131,8 @@ const logout = async (userId) => {
         user.refreshToken = undefined;
         await user.save({ validateBeforeSave: false }); */
 
+    // Or
+
     await User.findByIdAndUpdate(userId, { refreshToken: null })
 }
 
@@ -149,5 +151,31 @@ const forgotPassword = async (email) => {
     await user.save()
 }
 
-export { register, login, refreshAccessToken, rotateRefreshToken, logout, forgotPassword};
+const verifyEmail = async (token) => {
+    const hashedToken = hashToken(token);
 
+    const user = await User.findOne({ verificationToken: hashedToken }).select("+verificationToken")
+    // validation
+    if (!user) {
+        throw ApiError.unauthorized("User not registered")
+    }
+
+    user.isVerified = true;
+    user.verificationToken = undefined
+    await user.save() // optional validationBeforeSave
+
+    return user;
+}
+
+const getMe = async (userId) => {
+    const user = await User.findById(userId)
+
+    // validation
+    if (!user) {
+        throw ApiError.notfound("User not found")
+    }
+
+    // return user
+    return user;
+}
+export { register, login, refreshAccessToken, rotateRefreshToken, logout, forgotPassword, verifyEmail, getMe};
