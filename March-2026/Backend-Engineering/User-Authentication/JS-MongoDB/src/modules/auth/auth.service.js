@@ -1,6 +1,7 @@
 import ApiError from "../../common/utils/api-error.js"
 import User from "./auth.model.js"
 import { generateAccessToken, generateRefreshToken, generateResetToken, verifyRefreshToken } from "../../common/utils/jwt.utils.js"
+import { sendVerificationEmail } from "../../common/config/email.js"
 
 // hash token utility
 const hashToken = (token) => {
@@ -15,17 +16,23 @@ const register = async ({ name, email, password, role }) => {
         throw ApiError.conflict("Email already exists")
     };
 
-    const { rawToken, hashedToken } = generateResetToken();
+    const { token, hashedToken } = generateResetToken();
 
     const user = await User.create({
         name,
         email,
-        password, // hashed later
+        password, // hash later in model
         role,
         verificationToken: hashedToken
     });
 
     // TODO: send an email to user with token: rawToken
+    try {
+        await sendVerificationEmail(email, token)
+    } catch (error) {
+        console.log("Registration email failed", error);
+        throw ApiError.badRequest("Email failed")
+    }
 
     const userObj = user.toObject();
     delete userObj.password
@@ -143,3 +150,4 @@ const forgotPassword = async (email) => {
 }
 
 export { register, login, refreshAccessToken, rotateRefreshToken, logout, forgotPassword};
+
