@@ -2,6 +2,10 @@
   "name": "class",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run src/*",
+    "build": "bun build ./src/* --outdir ./dist"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
