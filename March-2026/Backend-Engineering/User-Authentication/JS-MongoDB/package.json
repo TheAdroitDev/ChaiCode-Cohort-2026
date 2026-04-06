@@ -5,7 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "db:up": "docker compose up",
+    "db:down": "docker compose down"
   },
   "keywords": [
     "restful",
