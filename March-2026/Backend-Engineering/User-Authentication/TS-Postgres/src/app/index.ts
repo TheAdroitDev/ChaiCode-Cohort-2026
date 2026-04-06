@@ -5,7 +5,7 @@ export function createApplication(): Express {
     const app = express()
 
     // middlewares
-
+    app.use(express.json())
 
     // routes
     app.get('/', (req,res) => {
