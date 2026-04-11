@@ -1,5 +1,5 @@
 import type { Request, Response } from "express"
-import signUpPayloadModel from "./model.js"
+import { signInPayloadModel, signUpPayloadModel } from "./model.js"
 import { usersTable } from "../../db/schema.js"
 import { db } from "../../db/index.js"
 import { eq } from "drizzle-orm"
@@ -39,6 +39,16 @@ class AuthenticationController {
 
         return res.status(201).json({
             message: "User created successfully"
+        })
+    }
+
+    public async handleSignin(req: Request, res: Response) {
+        // handle the data
+        const validationResult = await signInPayloadModel.safeParseAsync(req.body)
+
+        if (validationResult.error) return res.status(400).json({
+            message: "Body validation failed!",
+            error: validationResult.error.issues
         })
     }
 }
