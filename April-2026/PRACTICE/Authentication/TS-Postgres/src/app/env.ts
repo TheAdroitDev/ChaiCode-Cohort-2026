@@ -9,7 +9,11 @@ const envSchema = z.object({
     JWT_REFRESH_SECRET: z.string(),
     JWT_REFRESH_EXPIRY: z.string().default("7d"),
 
-    DATABASE_URL: z.string()
+    DATABASE_URL: z.string(),
+
+    SMTP_USER: z.string(),
+    SMTP_PASS: z.string(),
+    SMTP_FROM_EMAIL: z.email()
 })
 
 function createEnv(env: NodeJS.ProcessEnv) {
