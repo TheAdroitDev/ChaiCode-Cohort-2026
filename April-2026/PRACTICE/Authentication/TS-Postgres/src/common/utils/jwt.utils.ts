@@ -5,7 +5,7 @@ import { env } from "../../app/env.js";
 import type { SignOptions } from "jsonwebtoken";
 
 // Define payload type
-type TokenPayload = {
+export type TokenPayload = {
   userId: string;
 };
 
