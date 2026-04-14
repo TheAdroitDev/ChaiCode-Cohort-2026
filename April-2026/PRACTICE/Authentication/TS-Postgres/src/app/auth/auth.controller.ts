@@ -84,8 +84,8 @@ class AuthenticationController {
 
         // token
         const token = generateAccessToken({ userId: userSelect.id })
-        
-        return ApiResponse.signedIn(res, "Sign-in success", { token})
+
+        return ApiResponse.ok(res, "Sign-in success", { token})
     }
 }
 
