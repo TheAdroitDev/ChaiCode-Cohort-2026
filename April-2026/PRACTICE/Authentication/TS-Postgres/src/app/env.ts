@@ -1,10 +1,13 @@
 import { z } from "zod"
+import { configDotenv } from "dotenv";
+import "dotenv/config";
+import ApiError from "../common/utils/api-error.js";
 
 const envSchema = z.object({
     PORT: z.coerce.number(),
 
-    JWT_ACCESS_SECRET: z.string().default("15m"),
-    JWT_ACCESS_EXPIRY: z.string(),
+    JWT_ACCESS_SECRET: z.string(),
+    JWT_ACCESS_EXPIRY: z.string().default("15m"),
 
     JWT_REFRESH_SECRET: z.string(),
     JWT_REFRESH_EXPIRY: z.string().default("7d"),
@@ -18,7 +21,7 @@ const envSchema = z.object({
 
 function createEnv(env: NodeJS.ProcessEnv) {
     const safeParseResult = envSchema.safeParse(env);
-    if (!safeParseResult.success) throw new Error(safeParseResult.error.message)
+    if (!safeParseResult.success) throw ApiError.badRequest(safeParseResult.error.message)
     return safeParseResult.data
 }
 
