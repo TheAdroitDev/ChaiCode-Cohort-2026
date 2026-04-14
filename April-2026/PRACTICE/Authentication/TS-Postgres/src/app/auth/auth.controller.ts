@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import ApiError from "../../common/utils/api-error.js";
 import { createHmac, randomBytes } from "node:crypto";
 import ApiResponse from "../../common/utils/api-response.js";
-import { generateAccessToken } from "../../common/utils/jwt.utils.js";
+import { generateAccessToken, type TokenPayload } from "../../common/utils/jwt.utils.js";
 
 
 class AuthenticationController {
@@ -86,6 +86,19 @@ class AuthenticationController {
         const token = generateAccessToken({ userId: userSelect.id })
 
         return ApiResponse.ok(res, "Sign-in success", { token})
+    }
+
+     public async handleMe(req: Request, res: Response) {
+        // @ts-ignore
+        const { userId } = req.user! as TokenPayload
+
+        const [userResult] = await db.select().from(userTable).where(eq(userTable.id, userId))
+
+        return ApiResponse.ok(res,"Profile fetched successfully",{
+            firstName: userResult?.firstName,
+            lastName: userResult?.lastName,
+            email: userResult?.email
+        })
     }
 }
 
