@@ -6,3 +6,8 @@ export const signUpModel = z.object({
     email: z.email(), // regex: /^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i
     password: z.string()
 })
+
+export const signInModel = z.object({
+    email: z.email(),
+    password: z.string()
+})
