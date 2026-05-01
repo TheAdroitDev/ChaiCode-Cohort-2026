@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     res.json('Hello World!')
 })
 
-app.routes("/auth",authRoutes)
+// app.routes("/auth",authRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`)
