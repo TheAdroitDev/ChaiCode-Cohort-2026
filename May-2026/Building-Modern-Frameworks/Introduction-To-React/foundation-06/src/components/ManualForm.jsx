@@ -18,6 +18,9 @@ const ManualForm = () => {
         
     }
 
+    function validate(){
+        
+    }
     return (
         <div>
             ManualForm
