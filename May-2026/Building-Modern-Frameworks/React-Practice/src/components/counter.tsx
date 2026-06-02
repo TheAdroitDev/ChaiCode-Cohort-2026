@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export function Counter(){
+export function Counter() {
     const [count, setCount] = React.useState<number>(0)
 
     const containerStyles: React.CSSProperties = {
@@ -39,13 +39,20 @@ export function Counter(){
         fontSize: "1.5rem",
     }
 
+    function handleIncrement() {
+        (count >= 100) ? setCount(0) : setCount(count + 1)
+    }
+
+    function handleDecrement() {
+        if (count != 0) setCount(count - 1)
+    }
     return (
         <div style={containerStyles}>
-            <button style={buttonStyles} onClick={() => { setCount(count + 1) }}>
+            <button style={buttonStyles} onClick={handleIncrement}>
                 Increment
             </button>
             <h2 style={countStyles}>Count is {count}</h2>
-            <button style={secondaryButtonStyles} onClick={() => { setCount(count - 1) }}>
+            <button style={secondaryButtonStyles} onClick={handleDecrement}>
                 Decrement
             </button>
         </div>
