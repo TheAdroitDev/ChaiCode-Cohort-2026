@@ -1,1 +1,78 @@
+:root{
+    --bg1: #f6d365;
+    --bg2: #fda085;
+    --card: rgba(255,255,255,0.9);
+    --muted: #6b7280;
+    --accent: #4f46e5;
+    --danger: #ef4444;
+}
+*{box-sizing:border-box}
+body,html,#root{height:100%}
+.app{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:48px 16px;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+.header{ text-align:center; margin-bottom:18px }
+.title{ margin:0; font-size:28px; color:#111827 }
+.subtitle{ margin:4px 0 0; color:var(--muted); font-size:13px }
+.main{
+    width:100%;
+    max-width:720px;
+    background:var(--card);
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(15,23,42,0.12);
+}
+.input-row{ display:flex; gap:12px; margin-bottom:18px }
+.todo-input{
+    flex:1;
+    padding:12px 14px;
+    border-radius:12px;
+    border:1px solid rgba(15,23,42,0.06);
+    font-size:15px;
+    outline:none;
+    transition:box-shadow .15s,transform .06s;
+}
+.todo-input:focus{ box-shadow:0 6px 18px rgba(79,70,229,0.12); transform:translateY(-1px) }
+.add-button{
+    background:linear-gradient(180deg,var(--accent),#3730a3);
+    color:white;
+    border:none;
+    padding:0 18px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:transform .08s,opacity .12s;
+}
+.add-button:active{ transform:translateY(1px) }
+.todo-list{ list-style:none; padding:0; margin:0; display:grid; gap:10px }
+.todo-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 14px;
+    border-radius:10px;
+    background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.5));
+    border:1px solid rgba(15,23,42,0.04);
+}
+.todo-title{ color:#0f172a }
+.remove-button{
+    background:transparent;
+    color:var(--danger);
+    border:2px solid rgba(239,68,68,0.12);
+    padding:6px 10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.remove-button:hover{ background:rgba(239,68,68,0.04) }
+
+@media (max-width:520px){
+    .main{ padding:18px }
+    .title{ font-size:22px }
+}
 @import "tailwindcss";
