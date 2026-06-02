@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
-  let number = 0
+  let [count, setCount] = useState(0)
+
   function handleIncreaseButtonClick() {
-    console.log('Number After', number);
-    number = number + 1
-    console.log('Number Before', number);
+   setCount(count + 1)
   }
+  
   return (
     <div>
       <button onClick={handleIncreaseButtonClick}>Increment</button>
-      <h1>Count is {number}</h1>
+      <h1>Count is {count}</h1>
       <button>Decrement</button>
     </div>
   )
