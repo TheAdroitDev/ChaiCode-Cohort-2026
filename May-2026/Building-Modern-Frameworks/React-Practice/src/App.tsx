@@ -10,13 +10,21 @@ function App() {
     const [currentValue, setCurrentValue] = React.useState("");
     const [todos, setTodos] = React.useState<Todo[]>([])
 
+
     function handleAddClickAddButton() {
         todos.push({
             id: `${Date.now()}`,
             title: currentValue,
             isCompleted: false
         })
-        setTodos(todos)
+
+        const newArray = [...todos]
+        setTodos(newArray)
+    }
+
+    function handleRemove(id: string) {
+        const result = todos.filter(e => e.id !== id)
+        setTodos(result)
     }
     return (
         <>
@@ -30,7 +38,12 @@ function App() {
                 </div>
                 <div>
                     <ul>
-                        {todos.map(e => <li key={e.id}>{e.title}</li>)}
+                        {todos.map(e => (
+                            <>
+                                <li key={e.id}>{e.title}</li>
+                                <button onClick={() => { handleRemove(e.id) }}>Remove</button>
+                            </>
+                        ))}
                     </ul>
                 </div>
             </div>
