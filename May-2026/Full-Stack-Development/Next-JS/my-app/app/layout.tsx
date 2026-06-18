@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500"]
 })
 
 const roboto = Roboto({
@@ -41,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.className}  h-full antialiased`}
+      className={`${inter.className}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
