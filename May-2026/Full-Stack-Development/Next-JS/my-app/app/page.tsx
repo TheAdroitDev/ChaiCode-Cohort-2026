@@ -1,15 +1,20 @@
-import Image from "next/image";
+import TodoClient from "@/components/TodoClient";
 
 export default function Home() {
-    return (
-        <>
-            <div className="pt-10">
-                <img width={400} height={400} src="/image.svg" alt="japan" />
-                <div className="text-2xl flex items-center justify-center">
-                    <h2>Welcome to the Osaka Continental</h2>
-                </div>
-                <p className="text-xl flex items-center justify-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, numquam?</p>
-            </div>
-        </>
-    );
+  return (
+    <main className="min-h-screen bg-zinc-950">
+      <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mb-8 flex flex-col gap-3">
+          <span className="w-fit rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-300">
+            Daily planner
+          </span>
+          <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Manage your tasks
+          </h1>
+        </div>
+
+        <TodoClient />
+      </section>
+    </main>
+  );
 }
