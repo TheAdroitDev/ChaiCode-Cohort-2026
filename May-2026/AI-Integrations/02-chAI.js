@@ -34,3 +34,5 @@ const usage_stats = {
 };
 
 console.table(usage_stats);
+
+// to add memory, just add the history array can take into a variable and then add it to the messages array. The model will then have context of the previous conversation and can respond accordingly.
