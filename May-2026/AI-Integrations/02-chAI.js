@@ -42,3 +42,10 @@ console.table(usage_stats);
 // step:1 - create an account on open ai.
 // step:2 - create an api key and copy it.
 // step:3 - use it !!
+
+/* 
+  step 1: Tokenisation - convert the string into a token array.
+  step 2: embedding - convert the token array into a vector representation.
+  step 3: postitional encoding - encode the positional information of each word in the sentence.
+  step 4: attention mechanism - calculate the attention scores for each word in the sentence. (self-attention)
+*/
